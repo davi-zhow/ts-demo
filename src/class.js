@@ -29,12 +29,9 @@ var Animal = /** @class */ (function () {
         //设置成只读后构造函数内是可以初始化的，其他成员函数就不能进行复重新赋值了
         this.name = name;
     }
-    Animal.prototype.setName = function (name) {
-        this.name = name;
-    };
     return Animal;
 }());
-var a = new Animal("Jack");
+// let a = new Animal("Jack");
 // console.log(a.name);
 // a.name = "Tom";
 // console.log(a.name);
@@ -45,6 +42,9 @@ var Cat = /** @class */ (function (_super) {
         console.log(_this.name);
         return _this;
     }
+    Cat.prototype.setName = function (name) {
+        this.name = name;
+    };
     return Cat;
 }(Animal));
 var cat = new Cat("Tom");

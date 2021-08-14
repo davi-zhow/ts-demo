@@ -14,7 +14,7 @@ abstract class Animal {
         //设置成只读后构造函数内是可以初始化的，其他成员函数就不能进行复重新赋值了
         this.name = name;
     }
-    public abstract setName(name);
+    public abstract setName(name:string):void;
 }
 
 // let a = new Animal("Jack");
